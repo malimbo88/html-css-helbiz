@@ -1,0 +1,160 @@
+/* HELBIZ style.css */
+
+/* General */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  padding: 0px 16px 0px 16px;
+}
+
+.wrapper-menu {
+  margin: 0 auto;
+  padding: 0px 16px 0px 16px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* HEADER */
+header {
+  background-image: url("../img/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  max-width: 1170px;
+  height: 500px;
+  position: relative;
+}
+
+/* Main Menu */
+nav#main-menu {
+  background-color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  text-align: right;
+  padding: 16px;
+}
+
+nav#main-menu li {
+  display: inline-block;
+  line-height: 25px;
+}
+
+nav#main-menu li > a {
+  font-size: 0.625em;
+  color: #000000;;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+/* main-menu helbiz-logo */
+nav#main-menu .helbiz-logo {
+  color: #000000;
+  text-align: left;
+}
+
+nav#main-menu .helbiz-logo img {
+  vertical-align: middle;
+  height: 12px;
+}
+
+/* main-menu navigation-bar */
+nav#main-menu .navigation-bar li {
+  padding-right: 30px;
+}
+
+/* main-menu languages-bar */
+nav#main-menu .languages-bar li:not(:last-child) a{
+  border-right: 1px solid #000000;
+  padding: 5px 10px 5px 0px;
+}
+
+/* Head Title */
+#head-title {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate( -50%, -50%);
+  text-align: center;
+  color: #ffffff;
+}
+
+#head-title > h1 {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 3.2em;
+  font-weight: bolder;
+  letter-spacing: -0.04em;
+}
+
+#head-title > p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+  padding: 10px 0px 20px 0px;
+}
+
+#head-title  li {
+  display: inline-block;
+  padding: 0px 5px 0px 5px;
+}
+
+#head-title  li > img {
+  height: 170px;
+}
+
+/* MAIN */
+/* Section vehicles */
+#e-vehicles {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3em;
+  text-align: center;
+  color: #000;
+}
+
+#e-vehicles img {
+  height: 332px;
+}
+
+#e-vehicles .box {
+  background-color: #fafafa;
+  padding: 50px;
+  margin: 20px;
+}
+
+#e-vehicles [class*="col-"]:first-child > .box {
+  margin-left: 0px;
+}
+
+#e-vehicles [class*="col-"]:last-child > .box {
+  margin-right: 0px;
+}
+
+#e-vehicles .box > .e-scooter img,
+#e-vehicles .box > .e-bike img {
+  height: 22px;
+}
+
+#e-vehicles .e-scooter > *,
+#e-vehicles .e-bike > * {
+  margin-bottom: 20px;
+}
+
+#e-vehicles i.fas {
+font-size: 0.8em;
+margin-left: 5px;
+}
