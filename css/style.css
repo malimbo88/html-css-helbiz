@@ -34,9 +34,9 @@ a {
 header {
   background-image: url("../img/hero-bg.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
-  max-width: 1170px;
-  height: 500px;
+  background-position: 0% 215%;
+  background-color: green;
+  height: 580px;
   position: relative;
 }
 
