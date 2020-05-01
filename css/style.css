@@ -65,7 +65,7 @@ nav#main-menu li {
 
 nav#main-menu li > a {
   font-size: 0.625em;
-  color: #000000;;
+  color: #212529;
   letter-spacing: 0.1em;
   font-weight: 600;
   vertical-align: middle;
@@ -73,7 +73,6 @@ nav#main-menu li > a {
 
 /* main-menu helbiz-logo */
 nav#main-menu .helbiz-logo {
-  color: #000000;
   text-align: left;
 }
 
@@ -89,7 +88,7 @@ nav#main-menu .navigation-bar li {
 
 /* main-menu languages-bar */
 nav#main-menu .languages-bar li:not(:last-child) a{
-  border-right: 1px solid #000000;
+  border-right: 1px solid #212529;
   padding: 5px 10px 5px 0px;
 }
 
@@ -139,13 +138,16 @@ header .background-head {
 
 /* MEDIA QUERY head title*/
 @media all and (max-width: 768px) {
+  #head-title {
+    padding: 0px 20px;
+  }
   #head-title > h1 {
-    font-size: 2.3em;
+    font-size: 3em;
   }
 
   #head-title > p {
     font-family: 'Open Sans', sans-serif;
-    font-size: 1em;
+    font-size: 1.3em;
     padding: 15px;
   }
 
@@ -166,7 +168,7 @@ header .background-head {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.3em;
   text-align: center;
-  color: #000;
+  color:#212529;
 }
 
 #e-vehicles img {
@@ -240,36 +242,50 @@ margin-left: 5px;
 }
 
 /* Section show functions */
-#show-functions .container {
+#show-functions .wrapper-show-functions {
   position: relative;
+  color: #212529;
 }
-.banner-image {
+
+#show-functions .banner-image {
     background-image: url("../img/helbiz-Banner.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: -180px 0px;
+    background-position: -200px 0px;
     height: 500px;
 }
 
-.empty-display {
+#show-functions .empty-display {
   text-align: center;
   position: absolute;
-  top: 400px;
+  top: 450px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.empty-display img {
-  height: 500px;
+#show-functions .empty-display > img {
+  height: 600px;
+}
+
+#show-functions .show-functions-title  h3 {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 2.2em;
+  letter-spacing: -0.05em;
+}
+
+#show-functions .show-functions-list h4 {
+  padding-bottom: 10px;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+#show-functions .show-functions-list {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
 }
 
 #show-functions .box-show-functions {
-  padding: 20px;
-}
-
-#show-functions h3 {
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 2em;
+  padding:50px 0px;
 }
 
 /* MEDIA QUERY Section show functions */
@@ -278,13 +294,50 @@ margin-left: 5px;
     text-align: center;
   }
 
-  #show-functions .show-functions-title .box-show-functions {
-    padding-top: 150px;
+  #show-functions .banner-image {
+      background-position: -260px 0px;
   }
 
+  #show-functions .box-show-functions {
+    padding: 5px 50px;
+  }
+
+  #show-functions .show-functions-title > .box-show-functions {
+    padding-top: 250px;
+  }
+
+  #show-functions .show-functions-title h3 {
+    font-size: 2.5em;
+  }
 
 }
 
-@media all and (min-width: 768px) and (max-width: 991px) {
+@media all and (max-width: 780px) {
+#show-functions .banner-image {
+      background-position: -800px 0px;
+  }
+
+#show-functions .show-functions-list {
+  font-size: 1.4em;
+  }
+
+}
+
+@media all and (max-width: 480px) {
+#show-functions .show-functions-title > .box-show-functions {
+  padding-top: 150px;
+}
+
+#show-functions .show-functions-title h3 {
+  font-size: 2.8em;
+}
+
+#show-functions .empty-display img {
+  height: 550px;
+}
+
+#show-functions .empty-display {
+  top: 400px;
+}
 
 }
