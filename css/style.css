@@ -17,6 +17,56 @@ a {
   text-decoration: none;
 }
 
+.paragraph {
+font-family: 'Open Sans', sans-serif;
+font-size: 0.9em;
+}
+
+.sans-title {
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+  font-size: 2.2em;
+  letter-spacing: -0.05em;
+  line-height: 1.3em;
+}
+
+.noto-title {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 2.5em;
+  font-weight: bolder;
+  letter-spacing: -0.04em;
+}
+
+.white-text {
+  color: #ffffff;
+}
+
+.black-text {
+  color: #212529;
+}
+
+.text-center {
+  text-align: center;
+}
+
+a.learn-anchor {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+  color: #0070c8;
+}
+
+a.learn-anchor > i.fas {
+  font-size: 0.8em;
+  margin-left: 5px;
+}
+
+.absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate( -50%, -50%);
+}
+
 .wrapper {
   max-width: 1170px;
   margin: 0 auto;
@@ -35,10 +85,6 @@ a {
     padding: 0px 16px;
   }
 
-}
-
-.text-center {
-  text-align: center;
 }
 
 /* HEADER */
@@ -104,26 +150,7 @@ header .background-head {
 }
 
 /* Head Title */
-#head-title {
-  position: absolute;
-  width: 100%;
-  left: 50%;
-  top: 50%;
-  transform: translate( -50%, -50%);
-  text-align: center;
-  color: #ffffff;
-}
-
-#head-title > h1 {
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 2.5em;
-  font-weight: bolder;
-  letter-spacing: -0.04em;
-}
-
 #head-title > p {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 0.9em;
   padding: 20px 0px;
 }
 
@@ -146,7 +173,6 @@ header .background-head {
   }
 
   #head-title > p {
-    font-family: 'Open Sans', sans-serif;
     font-size: 1.3em;
     padding: 15px;
   }
@@ -161,13 +187,9 @@ header .background-head {
   }
 }
 
-
 /* MAIN */
 /* Section vehicles */
 #e-vehicles {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.3em;
-  text-align: center;
   color:#212529;
 }
 
@@ -199,17 +221,9 @@ header .background-head {
   margin-bottom: 20px;
 }
 
-#e-vehicles a {
-  color: #0070c8;
-}
-
-#e-vehicles i.fas {
-font-size: 0.8em;
-margin-left: 5px;
-}
-
 /* MEDIA QUERY Section vehicles */
 @media all and (max-width: 991px) {
+
   #e-vehicles .box {
     margin: 0px 0px 16px 0px;
   }
@@ -221,6 +235,7 @@ margin-left: 5px;
 }
 
 @media all and (max-width: 480px) {
+
   #e-vehicles img {
     height: 200px;
   }
@@ -244,100 +259,141 @@ margin-left: 5px;
 /* Section show functions */
 #show-functions .wrapper-show-functions {
   position: relative;
-  color: #212529;
 }
 
 #show-functions .banner-image {
-    background-image: url("../img/helbiz-Banner.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: -200px 0px;
-    height: 500px;
+  background-image: url("../img/helbiz-Banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -200px 0px;
+  height: 500px;
 }
 
 #show-functions .empty-display {
-  text-align: center;
-  position: absolute;
   top: 450px;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 #show-functions .empty-display > img {
   height: 600px;
 }
 
-#show-functions .show-functions-title  h3 {
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 2.2em;
-  letter-spacing: -0.05em;
-}
-
-#show-functions .show-functions-list h4 {
+#show-functions .show-functions-list h3 {
   padding-bottom: 10px;
   font-size: 1.2em;
   font-weight: 600;
 }
 
-#show-functions .show-functions-list {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1em;
-}
-
 #show-functions .box-show-functions {
-  padding:50px 0px;
+  padding: 50px 0px;
 }
 
 /* MEDIA QUERY Section show functions */
 @media all and (max-width: 991px) {
-  #show-functions {
-    text-align: center;
-  }
 
   #show-functions .banner-image {
-      background-position: -260px 0px;
-  }
-
-  #show-functions .box-show-functions {
-    padding: 5px 50px;
+    background-position: -260px 0px;
   }
 
   #show-functions .show-functions-title > .box-show-functions {
     padding-top: 250px;
   }
 
-  #show-functions .show-functions-title h3 {
+  #show-functions .show-functions-list > .box-show-functions {
+    margin: 0 auto;
+  }
+
+  #show-functions .box-show-functions {
+    padding: 0px 10px;
+    }
+
+  #show-functions .show-functions-title h2 {
     font-size: 2.5em;
+    text-align: center;
+    padding: 10px;
+  }
+
+  #show-functions .show-functions-list h3 {
+    font-size: 1.4em;
+    float: left;
+    padding-right: 10px;
+  }
+
+  #show-functions .show-functions-list p {
+    font-size: 1.2em;
+    float: left;
   }
 
 }
 
 @media all and (max-width: 780px) {
-#show-functions .banner-image {
-      background-position: -800px 0px;
-  }
 
-#show-functions .show-functions-list {
-  font-size: 1.4em;
+  #show-functions .banner-image {
+  background-position: -800px 0px;
   }
 
 }
 
 @media all and (max-width: 480px) {
-#show-functions .show-functions-title > .box-show-functions {
+
+  #show-functions .show-functions-title > .box-show-functions {
   padding-top: 150px;
-}
+  }
 
-#show-functions .show-functions-title h3 {
-  font-size: 2.8em;
-}
+  #show-functions .empty-display {
+    top: 400px;
+  }
 
-#show-functions .empty-display img {
+    #show-functions .empty-display img {
   height: 550px;
+  }
+
 }
 
-#show-functions .empty-display {
-  top: 400px;
+/* Section smart application */
+.smart-mobility {
+  height: 400px;
+  background-image: url("../img/helbiz-scooter.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
+.ride-today {
+  background-image: url("../img/background-map.png"), linear-gradient(#41566a, #252f38);
+  background-size: 60%, 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  height: 700px;
+}
+
+.covered-cities {
+  background-image: url("../img/helbiz-Cities.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+}
+
+.box-smart-app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.smart-mobility .text-center.absolute {
+  left: 75%;
+}
+
+.ride-today .absolute,
+.covered-cities .absolute {
+top: 20%;
+}
+
+.ride-today a,
+.covered-cities a {
+color: #ffffff;
+padding:0px 20px;
+}
+
+#smart-app .text-center > * {
+  padding-bottom: 20px;
 }
