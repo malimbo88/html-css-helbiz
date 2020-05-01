@@ -18,12 +18,23 @@ a {
 }
 
 .wrapper {
-  padding: 0px 16px 0px 16px;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0px 16px;
 }
 
 .wrapper-menu {
+  max-width: 1170px;
   margin: 0 auto;
-  padding: 0px 16px 0px 16px;
+  padding: 0px 48px;
+}
+
+/* MEDIA QUERY wrapper menu*/
+@media all and (max-width: 991px) {
+  .wrapper-menu {
+    padding: 0px 16px;
+  }
+
 }
 
 .text-center {
@@ -38,7 +49,13 @@ nav#main-menu {
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
   text-align: right;
-  padding: 16px;
+  padding: 16px 0px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 1;
 }
 
 nav#main-menu li {
@@ -75,14 +92,16 @@ nav#main-menu .languages-bar li:not(:last-child) a{
   border-right: 1px solid #000000;
   padding: 5px 10px 5px 0px;
 }
+
 /* Head Background */
-.background-head {
+header .background-head {
   background-image: url("../img/hero-bg.jpg");
   background-repeat: no-repeat;
   background-position: 0% 10%;
-  background-color: green;
   height: 500px;
   position: relative;
+  z-index: 0;
+  margin-top: 58px;
 }
 
 /* Head Title */
@@ -118,6 +137,29 @@ nav#main-menu .languages-bar li:not(:last-child) a{
   height: 50px;
 }
 
+/* MEDIA QUERY head title*/
+@media all and (max-width: 768px) {
+  #head-title > h1 {
+    font-size: 2.3em;
+  }
+
+  #head-title > p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    padding: 15px;
+  }
+
+  #head-title  li {
+    display: block;
+    padding: 5px 0px;
+  }
+
+  #head-title  li  img {
+    height: 60px;
+  }
+}
+
+
 /* MAIN */
 /* Section vehicles */
 #e-vehicles {
@@ -134,7 +176,7 @@ nav#main-menu .languages-bar li:not(:last-child) a{
 #e-vehicles .box {
   background-color: #fafafa;
   padding: 50px;
-  margin: 20px;
+  margin: 0px 8px;
 }
 
 #e-vehicles [class*="col-"]:first-child > .box {
@@ -145,8 +187,8 @@ nav#main-menu .languages-bar li:not(:last-child) a{
   margin-right: 0px;
 }
 
-#e-vehicles .box > .e-scooter img,
-#e-vehicles .box > .e-bike img {
+#e-vehicles .box > .e-scooter h2 > img,
+#e-vehicles .box > .e-bike h2 > img {
   height: 22px;
 }
 
@@ -162,4 +204,87 @@ nav#main-menu .languages-bar li:not(:last-child) a{
 #e-vehicles i.fas {
 font-size: 0.8em;
 margin-left: 5px;
+}
+
+/* MEDIA QUERY Section vehicles */
+@media all and (max-width: 991px) {
+  #e-vehicles .box {
+    margin: 0px 0px 16px 0px;
+  }
+
+  #e-vehicles .box {
+    padding: 20px;
+  }
+
+}
+
+@media all and (max-width: 480px) {
+  #e-vehicles img {
+    height: 200px;
+  }
+
+  #e-vehicles .box > .e-scooter h2 > img,
+  #e-vehicles .box > .e-bike h2 > img {
+    height: 18px;
+  }
+
+  #e-vehicles {
+    font-size: 1.1em;
+  }
+
+  #e-vehicles .e-scooter > *,
+  #e-vehicles .e-bike > * {
+    margin-bottom: 10px;
+  }
+
+}
+
+/* Section show functions */
+#show-functions .container {
+  position: relative;
+}
+.banner-image {
+    background-image: url("../img/helbiz-Banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -180px 0px;
+    height: 500px;
+}
+
+.empty-display {
+  text-align: center;
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.empty-display img {
+  height: 500px;
+}
+
+#show-functions .box-show-functions {
+  padding: 20px;
+}
+
+#show-functions h3 {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 2em;
+}
+
+/* MEDIA QUERY Section show functions */
+@media all and (max-width: 991px) {
+  #show-functions {
+    text-align: center;
+  }
+
+  #show-functions .show-functions-title .box-show-functions {
+    padding-top: 150px;
+  }
+
+
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+
 }
