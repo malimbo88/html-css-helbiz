@@ -56,7 +56,7 @@ a.learn-anchor > i.fas {
 @media all and (max-width: 991px) {
 
   .lato-title {
-    font-size: 1.3em;
+    font-size: 1.1em;
   }
 
 }
@@ -204,19 +204,21 @@ font-size: 0.9em;
 
 }
 
-.wrapper {
+.wrapper-horizontal {
   max-width: 1170px;
   margin: 0 auto;
   padding: 0px 16px;
 }
 
-[class*="wrapper"]:not(.wrapper-menu) {
+[class*="wrapper"] {
   padding-bottom: 16px;
 }
 
+.wrapper-footer {
+  padding-bottom: 0px;
+}
+
 .wrapper-menu {
-  max-width: 1170px;
-  margin: 0 auto;
   padding: 0px 48px;
 }
 
@@ -633,7 +635,7 @@ header .background-head {
 /* legal info */
 #legal-info .social-footer li > a > i {
   padding: 0px 10px;
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 
 /* MEDIA QUERY legal info */
