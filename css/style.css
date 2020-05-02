@@ -17,9 +17,23 @@ a {
   text-decoration: none;
 }
 
+.clear {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .paragraph {
 font-family: 'Open Sans', sans-serif;
 font-size: 0.9em;
+}
+
+@media all and (max-width: 992px) {
+
+  .paragraph {
+    font-size: 1.2em;
+  }
+
 }
 
 .sans-title {
@@ -30,11 +44,27 @@ font-size: 0.9em;
   line-height: 1.3em;
 }
 
+@media all and (max-width: 480px) {
+  .sans-title {
+    font-size: 2em;
+    line-height: 1em;
+    letter-spacing: 0;
+  }
+}
+
 .noto-title {
   font-family: 'Noto Sans', sans-serif;
   font-size: 2.5em;
   font-weight: bolder;
   letter-spacing: -0.04em;
+}
+
+@media all and (max-width: 480px) {
+
+  .noto-title {
+    font-size: 2em;
+  }
+
 }
 
 .white-text {
@@ -70,6 +100,19 @@ a.learn-anchor {
 a.learn-anchor > i.fas {
   font-size: 0.8em;
   margin-left: 5px;
+}
+
+@media all and (max-width: 992px) {
+
+  a.learn-anchor {
+    font-size: 1.2em;
+  }
+
+  a.learn-anchor > i.fas {
+    font-size: 0.9em;
+    margin-left: 5px;
+  }
+
 }
 
 .absolute {
@@ -215,18 +258,6 @@ header .background-head {
 
 }
 
-@media all and (max-width: 480px) {
-
-  #head-title > h1.noto-title {
-    font-size: 1.8em;
-  }
-
-  #head-title > p.paragraph {
-    font-size: 0.8em;
-  }
-
-}
-
 /* MAIN */
 /* Section vehicles */
 #e-vehicles {
@@ -282,11 +313,7 @@ header .background-head {
 
   #e-vehicles .box > .e-scooter h2 > img,
   #e-vehicles .box > .e-bike h2 > img {
-    height: 18px;
-  }
-
-  #e-vehicles {
-    font-size: 1.1em;
+    height: 24px;
   }
 
   #e-vehicles .e-scooter > *,
@@ -423,6 +450,32 @@ padding:0px 20px;
   background-image: url("../img/helbiz-Cities.jpg");
 }
 
+@media all and (max-width: 991px) {
+  #smart-app .ride-today > .box-smart-app {
+    background-position: 50% 250px, 100%;
+  }
+}
+
 @media all and (max-width: 780px) {
+
+  #smart-app .smart-mobility .text-center.absolute,
+  #smart-app .covered-cities .text-center.absolute {
+    left: 50%;
+    top: 50%;
+  }
+
+  #smart-app .smart-mobility > .box-smart-app {
+    background-position: 0% 100%;
+  }
+
+  #smart-app .ride-today a {
+    padding:0px 5px;
+  }
+
+  #smart-app .ride-today .text-center.absolute,
+  #smart-app .covered-cities .text-center.absolute {
+  top: 25%;
+  }
+
 
 }
