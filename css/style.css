@@ -49,6 +49,18 @@ font-size: 0.9em;
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.inline-element {
+  display: inline-block;
+}
+
 a.learn-anchor {
   font-family: 'Open Sans', sans-serif;
   font-size: 0.9em;
@@ -65,6 +77,35 @@ a.learn-anchor > i.fas {
   left: 50%;
   top: 50%;
   transform: translate( -50%, -50%);
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.box-smart-app {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.resize-horizontal {
+  height: 400px;
+}
+
+.resize-vertical {
+  height: 700px;
+}
+
+@media all and (max-width: 768px) {
+  [class*="resize"] {
+    height: 500px;
+  }
 }
 
 .wrapper {
@@ -92,15 +133,8 @@ a.learn-anchor > i.fas {
 /* Main Menu */
 nav#main-menu {
   background-color: #ffffff;
-  font-family: 'Open Sans', sans-serif;
-  text-transform: uppercase;
-  text-align: right;
   padding: 16px 0px;
-  position: fixed;
-  top: 0;
-  right: 0;
   width: 100%;
-  margin: 0 auto;
   z-index: 1;
 }
 
@@ -110,21 +144,27 @@ nav#main-menu li {
 }
 
 nav#main-menu li > a {
-  font-size: 0.625em;
-  color: #212529;
-  letter-spacing: 0.1em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.64em;
   font-weight: 600;
   vertical-align: middle;
 }
 
 /* main-menu helbiz-logo */
-nav#main-menu .helbiz-logo {
-  text-align: left;
+nav#main-menu .helbiz-logo img {
+  vertical-align: text-bottom;
+  height: 12px;
 }
 
-nav#main-menu .helbiz-logo img {
-  vertical-align: middle;
-  height: 12px;
+/* main-menu hamburgher-menu */
+nav#main-menu .hamburgher-menu li {
+  display: inline;
+}
+
+nav#main-menu .hamburgher-menu li > a > i{
+  font-size: 1.8em;
+  padding-right: 16px;
+  vertical-align: sub;
 }
 
 /* main-menu navigation-bar */
@@ -133,7 +173,7 @@ nav#main-menu .navigation-bar li {
 }
 
 /* main-menu languages-bar */
-nav#main-menu .languages-bar li:not(:last-child) a{
+nav#main-menu .languages-bar li:not(:last-child) a {
   border-right: 1px solid #212529;
   padding: 5px 10px 5px 0px;
 }
@@ -155,7 +195,6 @@ header .background-head {
 }
 
 #head-title  li {
-  display: inline-block;
   padding: 0px 4px;
 }
 
@@ -165,26 +204,27 @@ header .background-head {
 
 /* MEDIA QUERY head title*/
 @media all and (max-width: 768px) {
-  #head-title {
-    padding: 0px 20px;
-  }
-  #head-title > h1 {
-    font-size: 3em;
-  }
-
-  #head-title > p {
-    font-size: 1.3em;
-    padding: 15px;
-  }
-
-  #head-title  li {
-    display: block;
-    padding: 5px 0px;
-  }
 
   #head-title  li  img {
-    height: 60px;
+    height: 50px;
   }
+
+  #head-title .hamburgher-menu {
+    display:  block;
+  }
+
+}
+
+@media all and (max-width: 480px) {
+
+  #head-title > h1.noto-title {
+    font-size: 1.8em;
+  }
+
+  #head-title > p.paragraph {
+    font-size: 0.8em;
+  }
+
 }
 
 /* MAIN */
@@ -350,50 +390,39 @@ header .background-head {
 }
 
 /* Section smart application */
-.smart-mobility {
-  height: 400px;
+#smart-app .text-center > * {
+  padding-bottom: 20px;
+}
+
+#smart-app .smart-mobility .box-smart-app {
   background-image: url("../img/helbiz-scooter.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
-.ride-today {
-  background-image: url("../img/background-map.png"), linear-gradient(#41566a, #252f38);
-  background-size: 60%, 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 100%;
-  height: 700px;
-}
-
-.covered-cities {
-  background-image: url("../img/helbiz-Cities.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 700px;
-}
-
-.box-smart-app {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.smart-mobility .text-center.absolute {
+#smart-app .smart-mobility .text-center.absolute {
   left: 75%;
 }
 
-.ride-today .absolute,
-.covered-cities .absolute {
+#smart-app .ride-today .box-smart-app {
+  background-image: url("../img/background-map.png"), linear-gradient(#41566a, #252f38);
+  background-size: 60%, 100%;
+  background-position: 50% 100%, 100%;
+}
+
+#smart-app .ride-today .text-center.absolute,
+#smart-app .covered-cities .text-center.absolute {
 top: 20%;
 }
 
-.ride-today a,
-.covered-cities a {
+#smart-app .ride-today a,
+#smart-app .covered-cities a {
 color: #ffffff;
 padding:0px 20px;
 }
 
-#smart-app .text-center > * {
-  padding-bottom: 20px;
+#smart-app .covered-cities .box-smart-app {
+  background-image: url("../img/helbiz-Cities.jpg");
+}
+
+@media all and (max-width: 780px) {
+
 }
