@@ -45,11 +45,13 @@ font-size: 0.9em;
 }
 
 @media all and (max-width: 480px) {
+
   .sans-title {
     font-size: 2em;
     line-height: 1em;
     letter-spacing: 0;
   }
+
 }
 
 .noto-title {
@@ -122,6 +124,10 @@ a.learn-anchor > i.fas {
   transform: translate( -50%, -50%);
 }
 
+.relative {
+  position: relative;
+}
+
 .fixed {
   position: fixed;
   top: 0;
@@ -132,7 +138,6 @@ a.learn-anchor > i.fas {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative;
   width: 100%;
   height: 100%;
 }
@@ -146,15 +151,21 @@ a.learn-anchor > i.fas {
 }
 
 @media all and (max-width: 768px) {
+
   [class*="resize"] {
     height: 500px;
   }
+
 }
 
 .wrapper {
   max-width: 1170px;
   margin: 0 auto;
   padding: 0px 16px;
+}
+
+[class*="wrapper"]:not(.wrapper-menu) {
+  padding-bottom: 16px;
 }
 
 .wrapper-menu {
@@ -165,6 +176,7 @@ a.learn-anchor > i.fas {
 
 /* MEDIA QUERY wrapper menu*/
 @media all and (max-width: 991px) {
+
   .wrapper-menu {
     padding: 0px 16px;
   }
@@ -274,33 +286,34 @@ header .background-head {
   margin: 0px 8px;
 }
 
-#e-vehicles [class*="col-"]:first-child > .box {
+#e-vehicles .e-scooter > .box {
   margin-left: 0px;
 }
 
-#e-vehicles [class*="col-"]:last-child > .box {
+#e-vehicles .e-bike > .box {
   margin-right: 0px;
 }
 
-#e-vehicles .box > .e-scooter h2 > img,
-#e-vehicles .box > .e-bike h2 > img {
+#e-vehicles .box > .e-scooter-text h2 > img,
+#e-vehicles .box > .e-bike-text h2 > img {
   height: 22px;
 }
 
-#e-vehicles .e-scooter > *,
-#e-vehicles .e-bike > * {
+#e-vehicles .e-scooter-text > *,
+#e-vehicles .e-bike-text > * {
   margin-bottom: 20px;
 }
 
 /* MEDIA QUERY Section vehicles */
 @media all and (max-width: 991px) {
 
-  #e-vehicles .box {
+  #e-vehicles .e-scooter .box {
     margin: 0px 0px 16px 0px;
   }
 
   #e-vehicles .box {
     padding: 20px;
+    margin: 0px;
   }
 
 }
@@ -311,23 +324,19 @@ header .background-head {
     height: 200px;
   }
 
-  #e-vehicles .box > .e-scooter h2 > img,
-  #e-vehicles .box > .e-bike h2 > img {
+  #e-vehicles .box > .e-scooter-text h2 > img,
+  #e-vehicles .box > .e-bike-text h2 > img {
     height: 24px;
   }
 
-  #e-vehicles .e-scooter > *,
-  #e-vehicles .e-bike > * {
+  #e-vehicles .e-scooter-text > *,
+  #e-vehicles .e-bike-text > * {
     margin-bottom: 10px;
   }
 
 }
 
 /* Section show functions */
-#show-functions .wrapper-show-functions {
-  position: relative;
-}
-
 #show-functions .banner-image {
   background-image: url("../img/helbiz-Banner.jpg");
   background-repeat: no-repeat;
@@ -429,6 +438,10 @@ header .background-head {
   left: 75%;
 }
 
+#smart-app .ride-today {
+  padding: 16px 8px 0px 0px;
+}
+
 #smart-app .ride-today .box-smart-app {
   background-image: url("../img/background-map.png"), linear-gradient(#41566a, #252f38);
   background-size: 60%, 100%;
@@ -437,23 +450,35 @@ header .background-head {
 
 #smart-app .ride-today .text-center.absolute,
 #smart-app .covered-cities .text-center.absolute {
-top: 20%;
+  top: 20%;
+}
+
+#smart-app .covered-cities {
+  padding: 16px 0px 0px 8px;
 }
 
 #smart-app .ride-today a,
 #smart-app .covered-cities a {
-color: #ffffff;
-padding:0px 20px;
+  color: #ffffff;
+  padding:0px 20px;
 }
 
 #smart-app .covered-cities .box-smart-app {
   background-image: url("../img/helbiz-Cities.jpg");
 }
 
+/* MEDIA QUERY smart application */
 @media all and (max-width: 991px) {
+
   #smart-app .ride-today > .box-smart-app {
     background-position: 50% 250px, 100%;
   }
+
+  #smart-app .ride-today,
+  #smart-app .covered-cities {
+    padding: 16px 0px 0px 0px;
+  }
+
 }
 
 @media all and (max-width: 780px) {
@@ -465,7 +490,7 @@ padding:0px 20px;
   }
 
   #smart-app .smart-mobility > .box-smart-app {
-    background-position: 0% 100%;
+    background-position: 50% 100%;
   }
 
   #smart-app .ride-today a {
@@ -477,5 +502,35 @@ padding:0px 20px;
   top: 25%;
   }
 
+}
+
+/* Section social */
+#social-section .social-banner {
+  background-image: url("../img/social-Banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+
+#social-section .box-social {
+  background-color: #ffffff;
+  padding: 70px 140px;
+}
+
+#social-section .box-social i {
+  font-size: 1.8em;
+  padding: 10px 10px;
+}
+
+@media all and (max-width: 768px) {
+  #social-section .box-social {
+    padding: 30px 60px;
+  }
+
+  #social-section .box-social i {
+    font-size: 1.8em;
+    padding: 5px 10px;
+  }
 
 }
