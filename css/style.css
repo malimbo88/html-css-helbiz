@@ -2,9 +2,6 @@
 
 /* General */
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Noto Sans', sans-serif;
-  font-family: 'Lato', sans-serif;
   max-width: 1170px;
   margin: 0 auto;
 }
@@ -17,12 +14,67 @@ a {
   text-decoration: none;
 }
 
-.clear {
-  content: "";
-  display: table;
-  clear: both;
+hr {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: none;
+  border-width: 0px;
 }
 
+/* General icon style */
+a.learn-anchor {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+  color: #0070c8;
+}
+
+a.learn-anchor > i.fas {
+  font-size: 0.8em;
+  margin-left: 5px;
+}
+
+@media all and (max-width: 992px) {
+
+  a.learn-anchor {
+    font-size: 1.2em;
+  }
+
+  a.learn-anchor > i.fas {
+    font-size: 0.9em;
+    margin-left: 5px;
+  }
+
+}
+
+/* General Lato text style style */
+.lato-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+}
+
+@media all and (max-width: 991px) {
+
+  .lato-title {
+    font-size: 1.3em;
+  }
+
+}
+
+.lato-text {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9em;
+}
+
+@media all and (max-width: 991px) {
+
+  .lato-text {
+    font-size: 1.2em;
+  }
+
+}
+
+/* General Open Sans text style style */
 .paragraph {
 font-family: 'Open Sans', sans-serif;
 font-size: 0.9em;
@@ -54,6 +106,7 @@ font-size: 0.9em;
 
 }
 
+/* General Noto text style style */
 .noto-title {
   font-family: 'Noto Sans', sans-serif;
   font-size: 2.5em;
@@ -69,12 +122,17 @@ font-size: 0.9em;
 
 }
 
+/* General text style */
 .white-text {
   color: #ffffff;
 }
 
 .black-text {
   color: #212529;
+}
+
+.grey-text {
+  color: #696969;
 }
 
 .text-center {
@@ -89,32 +147,19 @@ font-size: 0.9em;
   text-transform: uppercase;
 }
 
+.text-capitalize {
+  text-transform: capitalize;
+}
+
 .inline-element {
   display: inline-block;
 }
 
-a.learn-anchor {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 0.9em;
-  color: #0070c8;
-}
-
-a.learn-anchor > i.fas {
-  font-size: 0.8em;
-  margin-left: 5px;
-}
-
-@media all and (max-width: 992px) {
-
-  a.learn-anchor {
-    font-size: 1.2em;
-  }
-
-  a.learn-anchor > i.fas {
-    font-size: 0.9em;
-    margin-left: 5px;
-  }
-
+/* General Position style and clear */
+.clear {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .absolute {
@@ -134,6 +179,7 @@ a.learn-anchor > i.fas {
   right: 0;
 }
 
+/* General box and wrapper style */
 .box-smart-app {
   background-repeat: no-repeat;
   background-size: cover;
@@ -497,8 +543,7 @@ header .background-head {
     padding:0px 5px;
   }
 
-  #smart-app .ride-today .text-center.absolute,
-  #smart-app .covered-cities .text-center.absolute {
+  #smart-app .ride-today .text-center.absolute {
   top: 25%;
   }
 
@@ -533,4 +578,93 @@ header .background-head {
     padding: 5px 10px;
   }
 
+}
+
+/* FOOTER */
+.footer-box {
+  background-color: #000000;
+  padding: 64px 48px;
+}
+
+.footer-box > * {
+  margin: 20px;
+}
+
+.footer-box hr {
+  background-color: #696969;
+  height: 1.5px;
+}
+
+.footer-box #footer-menu + hr{
+  margin: 56px 0px 32px 0px;
+}
+
+.footer-box #legal-info + hr{
+  margin: 32px 0px 32px 0px;
+}
+
+/* footer menu */
+#footer-menu .footer-logo {
+  padding-bottom: 60px;
+}
+
+#footer-menu h5 {
+  padding-bottom: 16px;
+}
+
+#footer-menu ul > li:not(:last-child) {
+  padding-bottom: 8px;
+}
+
+/* MEDIA QUERY footer menu */
+@media all and (max-width: 768px) {
+
+  #footer-menu {
+    text-align: center;
+  }
+
+  #footer-menu .footer-product ul > li:last-child,
+  #footer-menu .footer-info ul > li:last-child {
+    padding-bottom: 20px;
+  }
+
+}
+
+/* legal info */
+#legal-info .social-footer li > a > i {
+  padding: 0px 10px;
+  font-size: 1.2em;
+}
+
+/* MEDIA QUERY legal info */
+@media all and (max-width: 991px) {
+
+  #legal-info > div:last-child {
+    padding-top: 32px;
+  }
+
+}
+
+@media all and (max-width: 768px) {
+
+  #legal-info {
+    text-align: center;
+  }
+
+  #legal-info > *:not(:last-child){
+    padding-bottom: 16px;
+  }
+
+  #legal-info > div:last-child {
+    padding-top: 0px;
+  }
+
+}
+
+/* download application */
+#app-download a > img {
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  height: 40px;
+  margin:0px 4px;
 }
